@@ -1,0 +1,19 @@
+{
+  "name": "myclimbing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioSpecker/myClimbing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioSpecker/myClimbing/issues"
+  },
+  "homepage": "https://github.com/MarioSpecker/myClimbing#readme"
+}
