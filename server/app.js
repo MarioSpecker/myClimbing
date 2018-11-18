@@ -6,12 +6,14 @@ const hall = require('./routes/hall.route'); // Imports routes
 // initialize our express app
 const app = express();
 
-mongoose.connect('mongodb://localhost/clinbingdb',{useNewUrlParser: true});
+
 mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/clinbingdb');
+
 
 
 app.use(bodyParser.json() );
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/halls', hall);
 

@@ -1,4 +1,4 @@
-const Hall = require('../models/hall.model');
+var Hall = require('../models/hall.model');
 
 
 
@@ -8,28 +8,25 @@ exports.test = function (req, res) {
 };
 
 
-exports.create_hall = function(req, res, next){
+exports.create_hall = function(req, res){
     console.log("hallo1");
-    let hall = new Hall(
+    var hall = new Hall(
         {
-            id : req.body.id,
             name : req.body.name,
             city : req.body.city
 
         }
-    );
-    console.log("hallo2");
 
-    hall.save(function(err, res){
-    if(err){
-            console.log(err);
-        res.send({
-            message: 'something went wrong'
-        });
-    }else {
-        res.send({
-            message: 'the appointment has been saved'
-        });
-    }
-}
-}
+    );
+    hall.save()
+    .then(item => {
+    res.send("item saved to database");
+    })
+    .catch(err => {
+    res.status(400).send("unable to save to database");
+    });
+   
+    
+    
+};
+
