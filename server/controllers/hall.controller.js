@@ -1,4 +1,4 @@
-var Hall = require('../models/hall.model');
+const Hall = require('../models/hall.model');
 
 
 
